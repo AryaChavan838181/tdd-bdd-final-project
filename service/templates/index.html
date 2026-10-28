@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Product Catalog Administration</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font:16px system-ui,sans-serif;max-width:920px;margin:36px auto;padding:0 18px;color:#1a2433}
+fieldset {border:1px solid #ccd5e0;border-radius:9px;padding:20px}
+label {display:block;margin:10px 0 4px} input,select {padding:9px;width:100%;box-sizing:border-box}
+button {padding:10px 16px;margin:12px 5px 5px 0;cursor:pointer}
+#flash_message {min-height:26px;font-weight:600}
+table {border-collapse:collapse;width:100%} td,th{padding:9px;text-align:left;border-bottom:1px solid #dde2e8}
+</style></head><body>
+<h1>Product Catalog Administration</h1>
+<p>Create, read, update, delete, and search products.</p>
+<fieldset><legend>Product details</legend>
+<label for="product_id">Id</label><input id="product_id" type="number">
+<label for="product_name">Name</label><input id="product_name" type="text">
+<label for="product_description">Description</label><input id="product_description" type="text">
+<label for="product_price">Price</label><input id="product_price" type="text">
+<label for="product_available">Available</label><select id="product_available">
+<option value="">Any</option><option value="true">True</option><option value="false">False</option></select>
+<label for="product_category">Category</label><select id="product_category">
+<option value="">Any</option><option value="UNKNOWN">Unknown</option><option value="CLOTHS">Cloths</option>
+<option value="FOOD">Food</option><option value="HOUSEWARES">Housewares</option>
+<option value="AUTOMOTIVE">Automotive</option><option value="TOOLS">Tools</option></select>
+<button id="create-btn">Create</button><button id="retrieve-btn">Retrieve</button>
+<button id="update-btn">Update</button><button id="delete-btn">Delete</button>
+<button id="search-btn">Search</button><button id="clear-btn">Clear</button>
+</fieldset><p id="flash_message" role="status"></p>
+<table><thead><tr><th>ID</th><th>Name</th><th>Description</th><th>Price</th><th>Available</th><th>Category</th></tr></thead>
+<tbody id="search_results"></tbody></table>
+<script src="/static/catalogue.js"></script>
+</body></html>

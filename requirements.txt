@@ -1,0 +1,6 @@
+Flask>=3.0,<4
+Flask-SQLAlchemy>=3.1,<4
+factory_boy>=3.3,<4
+behave>=1.2.6,<2
+selenium>=4.20,<5
+requests>=2.31,<3
